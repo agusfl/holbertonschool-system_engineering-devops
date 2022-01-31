@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif"
+find . -name '*.gif' -type f -printf "%f\n" | rev | cut --complement -d. -f1 | rev | LC_COLLATE=C sort --ignore-case
