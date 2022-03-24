@@ -1,4 +1,4 @@
-# 0x01-shell_permissions
+# 0x01- Shell, permissions
 
 **Learning Objectives:**
 * What do the commands chmod, sudo, su, chown, chgrp do
