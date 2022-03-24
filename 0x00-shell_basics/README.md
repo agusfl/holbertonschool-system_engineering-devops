@@ -1,4 +1,4 @@
-# 0x00-shell_basics
+# 0x00- Shell, basics
 
 **Learning Objectives**:
 * How to navigate in an Unix system
