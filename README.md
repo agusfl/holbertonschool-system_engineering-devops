@@ -16,5 +16,3 @@ This repository contains programs written for the **System Engineering Devop** t
 ## Authors :pen:
 
 * [Agustin Flom](https://www.linkedin.com/in/agustin-f/)
-
-Thanks
