@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+# Info: https://linuxhint.com/bash-while-loop-examples/
+
+# Initialize counter
+n=1
+
+# Iterate the loop 10 times | -le is: less or equal
+while [ $n -le 10 ]
+do
+	# Print: Best School
+	echo "Best School"
+	# Increment the counter (n)
+	((n++))
+done
