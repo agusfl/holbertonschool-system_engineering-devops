@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# In this script I use the "cut" command with a for loop
+# Info: https://stackoverflow.com/questions/2437452/how-to-get-the-list-of-files-in-a-directory-in-a-shell-script
+# Info cut command: https://www.geeksforgeeks.org/cut-command-linux-examples/
+
+files_in_current_dir="$(ls)" # Con esta linea ejecuto el comando "ls" en la consola y guardo el output en 
+# files_in_current_dir".
+
+for file in $files_in_current_dir; # Con el for recorro cada 'file' dentro de files_in_current_dir y imprimo usando
+	# el comando "cut" para delimitar por "-" e imprimir lo que este en la columna 2 del delim (que es el nombre
+	# de los archivos sin el guion (-), tal cual pide la letra, ver formato en la task cualquier cosa).
+do
+	echo "$file" | cut -d "-" -f2 # Hago echo de lo que este "file" y con el pipe (|) se lo paso como input al
+	# "cut" command.
+done
+
+# No se necesita incrementar "file" aca porque va a recorrer todos los archivos que esten en (in) files_in_current_dir

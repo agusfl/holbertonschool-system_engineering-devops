@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# In this script I use the "cut" command with a for loop
+
+files_in_current_dir="$(ls)"
+for file in $files_in_current_dir;
+do
+	echo "$file" | cut -d "-" -f2
+done
