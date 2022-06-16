@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times with an if statement
+# This script use case statement and while
 
 # Create counter varaible and set to 1
 n=1
