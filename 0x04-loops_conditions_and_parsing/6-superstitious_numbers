@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times with an if statement
+
+# Create counter varaible and set to 1
+n=1
+
+# Loop using while n is less than 20
+while ((n<=20))
+do
+	echo "$n" # iter variable 'n'
+case $n in
+	"4")
+	echo "bad luck from China"
+	;;
+	"9")
+	echo "bad luck from Japan"
+	;;
+	"17")
+	echo "bad luck from Italy"
+	;;
+	esac
+	((n++))
+done
