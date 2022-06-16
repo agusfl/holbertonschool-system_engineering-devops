@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+
+# Initialize counter
+n=1
+
+# Iterate the loop 10 times | -gt is: greater than
+until [ $n -gt 10 ]
+do
+	# Print: Best School
+	echo "Best School"
+	# Increment the counter (n)
+	((n++))
+done
