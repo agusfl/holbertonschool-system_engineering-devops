@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This script is displaying 12 hours and the 59 minutes of each hour
+
+hours=0
+minutes=1
+
+while ((hours<=12))
+do
+	echo "Hour: "$hours
+	minutes=1 # Aca se resetea los minutos para que cuando se incremente "hours" y se pase a la proxima hora
+	# minutos arranque en 0.
+	while ((minutes<=59))
+	do
+		echo "$minutes"
+	((minutes++))
+	done
+((hours++))
+done
+
+# En este ejercicio se hacen dos whiles, uno para imprimir las horas que nos piden (del 0 al 12) y otro while para
+# imprimir los minutos (del 1 al 59). Para imprimir los minutos en cada hora nueva hay que resetear los minutos
+# antes de que se entre en el segundo while para empiece denuevo en 1 asi imprime todos los numeros hasta el 59, ya que
+# si no se resetea ya esta en 59 y no tiene lo que imprimir en los minutos.
