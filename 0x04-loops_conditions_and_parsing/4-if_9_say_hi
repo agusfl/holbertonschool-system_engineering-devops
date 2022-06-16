@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times with an if statement
+
+# Initialize counter
+n=1
+
+# Iterate the loop 10 times | -le is: less or equal
+while [ $n -le 10 ]
+do
+	if [ $n == 10 ]
+	then
+		echo "Hi"
+	fi
+	echo "Best School"
+	((n++))
+done
