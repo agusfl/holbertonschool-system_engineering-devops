@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Bash script that displays the content of the file /etc/passwd
+# Este ej se podria hacer con un for loop tmb pero en la letra nos piden
+# que usemos un while (asi usamos el command 'read').
 
 etc_passwd_file="/etc/passwd"
 
