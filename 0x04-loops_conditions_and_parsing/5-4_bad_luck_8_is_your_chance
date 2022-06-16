@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times with an if statement
+
+# Initialize counter
+n=1
+
+# Iterate the loop 10 times | -le is: less or equal
+while [ $n -le 10 ]
+do
+	# If counter 'n' is 4 do:
+	if [ $n == 4 ]
+	then
+		echo "bad luck"
+	# If counter 'n' is 8 do:
+	elif [ $n == 8 ]
+	then
+		echo "good luck"
+	else
+	echo "Best School"
+	fi
+	# Increment of counter 'n'
+	((n++))
+done
