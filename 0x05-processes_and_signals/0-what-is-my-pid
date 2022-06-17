@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that displays its own PID
+# There are several ways to achieve this task
+
+echo "$BASHPID"
+# Otra forma de hacerlo: echo $$
+# ps command - muestra el PID pero tmb otra info.
