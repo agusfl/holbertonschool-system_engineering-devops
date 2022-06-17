@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that kills the process 7-highlander
+# La opcion -9 es: SIGKILL (para matar un proceso) aca usamos el comando "pkill" porque le estamos pasando el nombre del
+# archivo que queremos matar y no el PID number, le pasamos: 7-highlander.
+# Info pkill: https://linuxize.com/post/pkill-command-in-linux/
+
+pkill -9 -f 7-highlander
