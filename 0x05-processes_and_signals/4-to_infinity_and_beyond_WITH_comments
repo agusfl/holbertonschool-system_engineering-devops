@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Bash script that displays "To infinity and beyond" idefinitely.
+
+while ((1))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
+
+# Se hace un while infinito (while (1)) se va a ejecutar siempre porque nunca cambia el 1. 
+# En el while lo que se hace es imprimir el texto que nos piden en la task y se pone un "sleep 2" para que se
+# espere 2 segundos entre que se imprime cada mensaje.
