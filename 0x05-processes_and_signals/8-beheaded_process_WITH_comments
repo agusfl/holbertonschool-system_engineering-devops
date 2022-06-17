@@ -5,3 +5,7 @@
 # Info pkill: https://linuxize.com/post/pkill-command-in-linux/
 
 pkill -9 -f 7-highlander
+
+# Otra forma de hacerlo usando el kill en lugar de pkill --> kill -9 "$(pgrep -f 7-highlander)"
+# Aca lo que se hace es matar al proceso por el PID number ya que el $(pgrep -f 7-higlhander) nos trae el PID.
+# Por lo tanto en este ejemplo vemos como matarlo por el PID en lugar del nombre del archivo.
