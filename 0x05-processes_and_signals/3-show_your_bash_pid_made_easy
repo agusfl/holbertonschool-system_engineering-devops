@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Bash script that displays the PID, along with the process name, of processes whose name contain the word bash
+# Whitout using 'ps' command.
+# Info pgrep: https://www.computerhope.com/unix/upgrep.htm#:~:text=On%20Unix%2Dlike%20operating%20systems,flexible%20selection%20methods%20as%20pgrep.
+
+pgrep -l bash
