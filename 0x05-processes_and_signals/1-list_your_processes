@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Bash script that displays a list of currently running processes
+# Use ps with flags to show the info in the way they tell us in the task
+
+ps auxf
