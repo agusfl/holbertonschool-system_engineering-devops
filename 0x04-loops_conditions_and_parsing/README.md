@@ -1,6 +1,6 @@
-# Loops, conditions and parsing
+# Bash - Loops, conditions and parsing
 
-Learning objectives:
+**Learning objectives:**
 
 * How to create SSH keys
 * What is the advantage of using #!/usr/bin/env bash over #!/bin/bash
@@ -8,6 +8,15 @@ Learning objectives:
 * How to use if, else, elif and case condition statements
 * How to use the cut command
 * What are files and other comparison operators, and how to use them
+
+**Commands to search:**
+
+* env
+* cut
+* for
+* while
+* until
+* if
 
 ## Environment
  
