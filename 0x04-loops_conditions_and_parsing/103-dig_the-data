@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Bash script that parse an apache log file.
+# Info how to use 'awk command' --> https://www.geeksforgeeks.org/awk-command-unixlinux-examples/#:~:text=Awk%20is%20mostly%20used%20for,Aho%2C%20Weinberger%2C%20and%20Kernighan.
+
+awk '{print $1,$9}' apache-access.log | sort | uniq -c | sort -nr
