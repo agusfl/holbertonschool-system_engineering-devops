@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script that displays lines containing the bash word
+# shellcheck disable=SC2009
+
+ps auxf | grep 'bash'
+
+# Aca usamos el mismo script que en la task anterior basicamente solo que le agregamos con el pipe --> | que se use el
+# comando 'grep' para filtrar por las lineas que contengan "bash".
+# Usamos el: shellcheck disable=SC2009 --> para que no nos de problemas de sintaxis el shellcheck.
+# No nos dejan usar "pgrep" en este ej..
