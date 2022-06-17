@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Bash script that displays some text and catch a SIGTERM
+# "trap" command --> https://linuxhint.com/bash_trap_command/#:~:text=An%20infinite%20for%20loop%20is,Z%20to%20generate%20SIGTERM%20signal.&text=Run%20the%20script%20by%20executing,following%20similar%20output%20will%20appear.
 
 trap "echo I am invincible!!!" SIGTERM
 while ((1))
