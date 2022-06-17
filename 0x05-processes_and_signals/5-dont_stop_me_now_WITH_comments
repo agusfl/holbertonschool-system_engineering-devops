@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Bash script that stops the file 4-to_infinity_and_beyond process.
+
+kill "$(pgrep -f 4-to_infinity_and_beyond)"
+
+# Usamos el comando kill y le pasamos la variable con $ usando el comando "pgrep" y la opcion -f que lo que hace es:
+# The pattern is normally only matched against the process name.
+# --> info pgrep: https://www.computerhope.com/unix/upgrep.htm#:~:text=On%20Unix%2Dlike%20operating%20systems,flexible%20selection%20methods%20as%20pgrep.
+# Lo que hace este script es matar el proceso que ejecutamos al correr el script que hicimos en la task anterior
+# (4-to_infinity_and_beyond), para ver como mata al proceso tenemos que abrir dos terminales, en una corremos el script
+# 4-to_infinity_and_beyond y en la otra corremos este script que creamos recien.
