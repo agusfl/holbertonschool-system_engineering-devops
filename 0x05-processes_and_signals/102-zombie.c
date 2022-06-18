@@ -31,8 +31,6 @@ int main(void)
 			(int) getpid());
 			exit(0);
 		}
-
-		/*child = wait(&status);*/
 		zombie_5++;
 	}
 	infinite_while();
