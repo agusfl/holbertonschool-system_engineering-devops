@@ -13,7 +13,7 @@ int infinite_while(void);
 int main(void)
 {
 	pid_t child;
-	int status = 0, zombie_5 = 0;
+	int zombie_5 = 0;
 
 	while (zombie_5 < 5)
 	{
@@ -32,11 +32,10 @@ int main(void)
 			exit(0);
 		}
 
-		child = wait(&status);
+		/*child = wait(&status);*/
 		zombie_5++;
 	}
 	infinite_while();
-
 	return (0);
 }
 
