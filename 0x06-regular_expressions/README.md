@@ -1,4 +1,4 @@
-# Ruby script - Regular Expressions:
+# Bash script using Ruby - Regular Expressions:
 
 **Resources:**
 
