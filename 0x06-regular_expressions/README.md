@@ -28,15 +28,15 @@ Because the focus of this exercise is to play with regular expressions (regex), 
 
 | Files          |Desription
 |:----------------|:-------------------------------:|
-| |
-| |
-| |
-| |
-| |
-| |
-| |
-| |
-| |
+|0-simply_match_school.rb |Script to match ``School``.
+|1-repetition_token_0.rb |Script to match ``hbttn`` that can have a letter 't' between 2 and 5 times.
+|2-repetition_token_1.rb |Script to match ``htn`` or ``hbtn``.
+|3-repetition_token_2.rb |Script to match ``hbtn`` and the t can be between 1 and 4.times.
+|4-repetition_token_3.rb |Script to match ``hbtn`` and the t can be between 1 and 4 times without using square brackets.
+|5-beginning_and_end.rb |Script to match: The regular expression must be exactly matching a string that starts with ``h`` ends with ``n`` and can have any single character in between.
+|6-phone_number.rb |Script to match: The regular expression must be exactly matching a string that starts with ``h`` ends with ``n`` and **can have any single character in between**.
+|7-OMG_WHY_ARE_YOU_SHOUTING.rb |Script to match: The regular expression must be only matching: ``capital letters``.
+|100-textme.rb |Your script should output: ``[SENDER],[RECEIVER],[FLAGS]``.
 
 
 ## Authors :pen:
