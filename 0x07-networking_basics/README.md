@@ -62,12 +62,12 @@
 
 | Files          |Desription
 |:----------------|:-------------------------------:|
-|0-OSI_model |
-|1-types_of_network |
-|2-MAC_and_IP_address |
-|3-UDP_and_TCP |
-|4-TCP_and_UDP_ports |
-|5-is_the_host_on_the_network |
+|0-OSI_model |answer to the questions.
+|1-types_of_network |answer to the questions.
+|2-MAC_and_IP_address |answer to the questions.
+|3-UDP_and_TCP |answer to the questions.
+|4-TCP_and_UDP_ports |Bash script that displays listening ports
+|5-is_the_host_on_the_network |Bash script that pings an IP address passed as an argument.
 
 ## Authors :pen:
 
