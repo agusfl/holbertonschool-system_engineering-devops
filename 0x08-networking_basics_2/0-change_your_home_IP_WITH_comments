@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Bash script that updates hostfile to change localhost to 127.0.0.2 and facebook.com to 8.8.8.8
+# Info: https://web.archive.org/web/20171117023601/http://blog.jonathanargentiero.com/docker-sed-cannot-rename-etcsedl8ysxl-device-or-resource-busy/
+
+cp /etc/hosts ~/hosts.new # se crea una copia del archivo "hosts" en el home directory (esto representa el simbolo: ~)
+sed -i s/127.0.0.1/127.0.0.2/ ~/hosts.new # Con el comando "sed" se cambia la direecion IP de localhost a: 127.0.0.2
+echo -e "8.8.8.8\t facebook.com" >> ~/hosts.new # Se hace un append y se agrega facebook con la IP: 8.8.8.8
+cp -f ~/hosts.new /etc/hosts # Se copa el archivo con el nombre que tenia: etc/hosts
