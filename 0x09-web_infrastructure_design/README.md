@@ -25,14 +25,9 @@
 * Know all the mentioned acronyms: LAMP, SPOF, QPS
 
 
-## Description of each file:
+## Task 0:
 
-| Files          |Desription
-|:----------------|:-------------------------------:|
-| |
-| |
-| |
-| |
+<img width="1498" alt="Task 0 - web infraestructure" src="https://user-images.githubusercontent.com/64185026/179132070-7eb485ca-0746-4f6f-bcce-949ceee4383f.png">
 
 ## Authors :pen:
 
