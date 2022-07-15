@@ -31,7 +31,7 @@
 
 ## Task 1:
 
-<img width="1518" alt="Task_1" src="https://user-images.githubusercontent.com/64185026/179137265-dd284f75-7dfb-45bf-8cd5-5dca41b47b73.png">
+<img width="1599" alt="Task-1" src="https://user-images.githubusercontent.com/64185026/179143627-4a039534-5d2e-47fa-a1f8-893864d664a4.png">
 
 ## Task 2:
 
