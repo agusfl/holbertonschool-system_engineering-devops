@@ -35,6 +35,8 @@
 
 ## Task 2:
 
+<img width="1599" alt="Task-2" src="https://user-images.githubusercontent.com/64185026/179145936-5c405409-851b-4ed2-adb4-659e6e348e4e.png">
+
 ## Authors :pen:
 
 * [Agustin Flom](https://www.linkedin.com/in/agustin-f/)
