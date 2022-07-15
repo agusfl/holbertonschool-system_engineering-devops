@@ -31,6 +31,10 @@
 
 ## Task 1:
 
+<img width="1518" alt="Task_1" src="https://user-images.githubusercontent.com/64185026/179137265-dd284f75-7dfb-45bf-8cd5-5dca41b47b73.png">
+
+## Task 2:
+
 
 
 ## Authors :pen:
