@@ -27,7 +27,11 @@
 
 ## Task 0:
 
-<img width="1498" alt="Task 0 - web infraestructure" src="https://user-images.githubusercontent.com/64185026/179132070-7eb485ca-0746-4f6f-bcce-949ceee4383f.png">
+<img width="1498" alt="Task_0" src="https://user-images.githubusercontent.com/64185026/179136516-5c694dc9-fc77-424b-b65d-5839491b23e2.png">
+
+## Task 1:
+
+
 
 ## Authors :pen:
 
