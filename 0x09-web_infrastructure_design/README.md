@@ -40,3 +40,4 @@
 ## Authors :pen:
 
 * [Agustin Flom](https://www.linkedin.com/in/agustin-f/)
+* [Santiago Neira](https://github.com/sanei1509)
