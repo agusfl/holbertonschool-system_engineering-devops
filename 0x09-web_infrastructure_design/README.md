@@ -31,11 +31,9 @@
 
 ## Task 1:
 
-<img width="1599" alt="Task-1" src="https://user-images.githubusercontent.com/64185026/179143627-4a039534-5d2e-47fa-a1f8-893864d664a4.png">
+<img width="1599" alt="Task-1" src="https://user-images.githubusercontent.com/64185026/179144138-dffc74cb-52f2-4c5f-9cc7-385f0e668a58.png">
 
 ## Task 2:
-
-
 
 ## Authors :pen:
 
