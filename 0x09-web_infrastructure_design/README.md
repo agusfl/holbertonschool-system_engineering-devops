@@ -37,6 +37,10 @@
 
 <img width="1599" alt="Task-2" src="https://user-images.githubusercontent.com/64185026/179145936-5c405409-851b-4ed2-adb4-659e6e348e4e.png">
 
+## Task 3:
+
+<img width="1599" alt="Task-3" src="https://user-images.githubusercontent.com/64185026/179238053-36e8e15b-c14e-4521-8a91-8ed532f4ee50.png">
+
 ## Authors :pen:
 
 * [Agustin Flom](https://www.linkedin.com/in/agustin-f/)
