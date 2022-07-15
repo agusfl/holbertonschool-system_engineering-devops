@@ -27,7 +27,7 @@
 
 ## Task 0:
 
-<img width="1498" alt="Task_0" src="https://user-images.githubusercontent.com/64185026/179136516-5c694dc9-fc77-424b-b65d-5839491b23e2.png">
+<img width="1498" alt="Task-0" src="https://user-images.githubusercontent.com/64185026/179136968-fba648d4-c932-4e50-a604-1d029d6f166f.png">
 
 ## Task 1:
 
