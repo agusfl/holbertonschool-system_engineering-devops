@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script that creates an RSA key pair.
+# Info: https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#connecting-to-a-remote-server
+# Info: https://www.ssh.com/academy/ssh/keygen
+# flag - f es para que la clave privada se cree en un archivo llamado "school"
+# flag -b indica la cantidad de bits para la contr.
+# flag -N indica la clave que se le quiere poner para el "passphrase" - es como la contraseña que se pone para entrar cuando se quiere conectar al servidor.
+# La clave privada guardada en "school" no la subi a github por las dudas.
+
+ssh-keygen -f school -b 4096 -N betty
