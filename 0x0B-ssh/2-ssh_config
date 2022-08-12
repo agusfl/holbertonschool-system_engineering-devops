@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Your machine has an SSH configuration file for the local SSH client, let’s configure it to our needs so that you can connect to a server without typing a password.
+# Le ponemos el numero de IP de nuestro servidor en lugar del asterisco al Host para no tener errores de shell check.
+
+Host 54.160.237.107
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school
