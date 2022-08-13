@@ -9,6 +9,6 @@ file_line { 'Identity file':
   line   => '    IdentityFile ~/.ssh/school',
 }
 file_line { 'disable password':
-    path => '/etc/ssh/ssh_config',
-    line => '    PasswordAuthentication no',
+  path => '/etc/ssh/ssh_config',
+  line => '    PasswordAuthentication no',
 }
