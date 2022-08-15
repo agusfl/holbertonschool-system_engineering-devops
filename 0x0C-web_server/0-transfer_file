@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 # Bash script that transfers a file from our client to a server
+# Accepts 4 parameters:
+# 1. The path to the file to be transferred
+# 2. The IP of the server we want to transfer the file to
+# 3. The username scp connects with
+# 4. The path to the SSH private key that scp uses
+# Display Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY if less than 4 parameters passed
 # "lt" is less than - le indicamos que si es menor a cuatro los comandos en linea que se imprima el mensaje de "usage"
 # Con el "$#" nos devuelve el largo de los comandos en linea que se pasaron
 # Con el signo de pesos se accede a los comandos que se pasaron en linea
+# Info comando scp --> https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/
+# Con el --> :~/ se le indica que se transfiera el archivo al home directory
 # How to disabled strict host --> https://tecadmin.net/disable-strict-host-key-checking-in-ssh/
 
 if [ "$#" -lt 4 ]
