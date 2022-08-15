@@ -17,6 +17,10 @@ This repository contains programs written for the **System Engineering Devop** t
 * [0x06 - Regular expressions](./0x06-regular_expressions)
 * [0x07 - Networking Basics 1](./0x07-networking_basics)
 * [0x08 - Networking Basics 2](./0x08-networking_basics_2)
+* [0x09 - Web Infraestructure Design](./0x09-web_infrastructure_design)
+* [0x0A - Configuration Management (Puppet)](./0x0A-configuration_management)
+* [0x0B - SSH (Bash scripts) | Servers](./0x0B-ssh)
+* [0x0C - Web Server](./0x0C-web_server)
 
 ## Authors :pen:
 
