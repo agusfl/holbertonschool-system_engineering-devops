@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Configure your Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page.
+# Requirements:
+# * The page must return an HTTP 404 error code
+# * The page must contain the string Ceci n'est pas une page
+# * Using what you did with 3-redirection, write 4-not_found_page_404 so that it configures a brand new Ubuntu machine to the requirements asked in this task
+# Se crea un archivo llamado "404-page.html" dentro de la ruta "/var/www/html" le damos permisos (777) y dentro del archivo ponemos el texto en frances que nos piden.
+# Con el 55i dentro del sed le indicamos la fila donde queremos que se agrege el texto que ponemos a continuacion.
+
+sudo apt update
+sudo apt -y install nginx
+sudo chmod 777 /var/www/html/index.html
+echo 'Hello World' | sudo tee /var/www/html/index.html
+sudo sed -i '/server_name _;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+# Adding message for status 404 not found:
+sudo touch /var/www/html/404-page.html
+sudo chmod 777 /var/www/html/404-page.html
+sudo echo "Ceci n'est pas une page" > /var/www/html/404-page.html
+sudo sed -i '55i error_page 404 /404-page.html;' /etc/nginx/sites-enabled/default
+sudo service nginx restart
