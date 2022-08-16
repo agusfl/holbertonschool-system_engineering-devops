@@ -4,10 +4,13 @@
 # * The redirection must be a “301 Moved Permanently”
 # * You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements
 # * Using what you did with 1-install_nginx_web_server, write 3-redirection so that it configures a brand new Ubuntu machine to the requirements asked in this task
+# El comando sed -i nos permite pasar mas de un comando y especificar las lineas para que se expandan, aca le estamos indicando que se vaya a la ruta:
+# /etc/nginx/sites-available/default y se modifique --> server_name _; y se esciba: /redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
 
 sudo apt update
 sudo apt -y install nginx
-sudo chmod 777 /var/www/html/index.html
-echo 'Hello World' | sudo tee /var/www/html/index.html
+cd /var/www/html || exit
+sudo chmod 777 index.nginx-debian.html
+echo Hello World! > index.nginx-debian.html
 sudo sed -i '/server_name _;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 sudo service nginx restart
