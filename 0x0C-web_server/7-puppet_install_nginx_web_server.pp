@@ -3,7 +3,8 @@
 # To save time and effort, you should also include resources in your manifest to perform a 301 redirect when querying /redirect_me.
 
 # Install nginx:
-package { 'nginx': }
+package { 'nginx':
+}
 
 # Se agrega Hello World en el archivo --> index.nginx-debian.html para mostrarlo en la pagina web
 file { '/var/www/html/index.nginx-debian.html':
@@ -24,4 +25,4 @@ file_line { 'redirect 301 status':
 service { 'nginx':
     ensure  => running,
     require => Package['nginx'],
-  }
+}
