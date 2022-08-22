@@ -5,9 +5,8 @@
 # * Make sure that HAproxy can be managed via an init script
 
 # Install HAProxy --> https://haproxy.debian.net/#distribution=Ubuntu&release=focal&version=2.4
-sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository -y ppa:vbernat/haproxy-2.4
-sudo apt-get install -y haproxy=2.4.\*
+sudo apt update
+sudo apt-get install -y haproxy
 
 # Backup del archivo original por si se rompe algo
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy_backup.cfg
