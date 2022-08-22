@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy on your lb-01 server.
+# * Configure HAproxy so that it send traffic to web-01 and web-02
+# * Distribute requests using a roundrobin algorithm
+# * Make sure that HAproxy can be managed via an init script
+
+# Install HAProxy --> https://haproxy.debian.net/#distribution=Ubuntu&release=focal&version=2.4
+sudo apt-get install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.4
+sudo apt-get install -y haproxy=2.4.\*
+
+# Backup del archivo original por si se rompe algo
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy_backup.cfg
+
+# Se configura el archivo haproxy.cfg para que maneje los dos servidores web (01 y 02)
+echo "
+frontend haproxy-main
+    bind *:80
+    option forwardfor
+    default_backend nginx_servers
+
+backend nginx_servers
+    balance roundrobin
+    server 4390-web-01  54.160.237.107:80 check
+    server 4390-web-02  54.242.209.114:80 check
+"| sudo tee -a /etc/haproxy/haproxy.cfg
+
+# Make sure that HAproxy can be managed via an init script
+sudo sed -i '8i ENABLED=1;' /etc/default/haproxy
+
+# Restart haproxy load balancer
+sudo service haproxy restart
