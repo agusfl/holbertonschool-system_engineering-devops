@@ -13,8 +13,8 @@ file_line { 'add_path':
   line   => "add_header X-Served-By ${hostname};",
 }
 
-# Se indica el estado en el que tiene que estar el servicio (en este caso queremos que este corriendo)
-service { 'nginx':
-    ensure  => running,
-    require => Package['nginx'],
-}
+# Restart Nginx para que queden los cambios
+exec { 'restart_nginx': # se puede poner cualquier nombre aca
+  command  => 'sudo service nginx restart', # Aca se le pasa el comando a ejecutar
+  provider => 'shell' # Se le indica donde se va a correr
+  }
