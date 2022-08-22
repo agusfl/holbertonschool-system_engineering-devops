@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Since we’re placing our web servers behind a load balancer for this project, we want to add a custom Nginx response header. 
+# The goal here is to be able to track which web server is answering our HTTP requests, to understand and track the way a load balancer works.
+
+# Configure Nginx the same way as web server 01:
+sudo apt update
+sudo apt -y install nginx
+sudo chmod 777 /var/www/html/index.html
+echo 'Hello World' | sudo tee /var/www/html/index.html
+
+# Configure redirection (301 Moved Permanently):
+sudo sed -i '/server_name _;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+
+# Adding message for status 404 not found:
+sudo touch /var/www/html/404-page.html
+sudo chmod 777 /var/www/html/404-page.html
+sudo echo "Ceci n'est pas une page" > /var/www/html/404-page.html
+sudo sed -i '55i error_page 404 /404-page.html;' /etc/nginx/sites-enabled/default
+
+# Update Header - add_header in "location"
+# Info: https://techexpert.tips/nginx/nginx-add-header/
+sudo sed -i "/listen 80 default_server/a add_header X-Served-By '$HOSTNAME';" /etc/nginx/sites-enabled/default
+# Hacemos el restart del servidor para que se apliquen los cambios
+sudo service nginx restart
