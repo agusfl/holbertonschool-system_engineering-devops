@@ -20,15 +20,6 @@ exec { 'add_header':
   before   => Exec['restart_nginx'],
 }
 
-# Add Header
-file_line { 'add_header':
-  ensure => present,
-  path   => '/etc/nginx/sites-enabled/default',
-  after  => 'listen 80 default_server;',
-  line   => "add_header X-Served-By '${hostname}'';",
-  before => Exec['restart_nginx'],
-}
-
 # Restart Nginx para que queden los cambios
 exec { 'restart_nginx': # se puede poner cualquier nombre aca
   command  => 'sudo service nginx restart', # Aca se le pasa el comando a ejecutar
