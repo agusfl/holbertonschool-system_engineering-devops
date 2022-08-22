@@ -4,20 +4,23 @@
 exec { 'update':
   command  => 'sudo apt-get -y update',
   provider => shell,
+  before   => Exec['install Nginx'],
 }
 
 # Install nginx:
 exec {'install Nginx':
   provider => shell,
   command  => 'sudo apt-get -y install nginx',
+  before   => Exec['add_header'],
 }
 
 # Add Header
-file_line { 'add_path':
+file_line { 'add_header':
   ensure => present,
   path   => '/etc/nginx/sites-enabled/default',
   after  => 'listen 80 default_server;',
   line   => "add_header X-Served-By '${hostname}'';",
+  before => Exec['restart_nginx'],
 }
 
 # Restart Nginx para que queden los cambios
