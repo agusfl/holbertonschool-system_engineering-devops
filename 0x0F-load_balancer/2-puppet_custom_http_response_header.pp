@@ -10,7 +10,7 @@ file_line { 'add_path':
   ensure => present,
   path   => '/etc/nginx/sites-enabled/default',
   after  => 'listen 80 default_server;',
-  line   => "add_header X-Served-By ${hostname};",
+  line   => "add_header X-Served-By '${hostname}'';",
 }
 
 # Restart Nginx para que queden los cambios
