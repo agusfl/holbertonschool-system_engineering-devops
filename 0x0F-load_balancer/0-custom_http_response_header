@@ -17,7 +17,7 @@ sudo chmod 777 /var/www/html/404-page.html
 sudo echo "Ceci n'est pas une page" > /var/www/html/404-page.html
 sudo sed -i '55i error_page 404 /404-page.html;' /etc/nginx/sites-enabled/default
 
-# Update Header - add_header in "location"
+# Update Header - add_header
 # Info: https://techexpert.tips/nginx/nginx-add-header/
 sudo sed -i "/listen 80 default_server/a add_header X-Served-By '$HOSTNAME';" /etc/nginx/sites-enabled/default
 # Hacemos el restart del servidor para que se apliquen los cambios
