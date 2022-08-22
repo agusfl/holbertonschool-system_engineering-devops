@@ -2,7 +2,7 @@
 
 # update
 exec { 'update':
-  command  => 'sudo apt-get update',
+  command  => 'sudo apt-get -y update',
   provider => shell,
 }
 
