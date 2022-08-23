@@ -35,5 +35,6 @@ print_sub "web-02.$1"
 # Si nos pasan "subdomain" y "domain" venimos a este else y llamamos a la funcion pasandole
 # primero el subdominio luego un punto y luego el dominio
 else
+    printf "The subdomain %s " "$2" # Printeamos lo que pasen como segundo argumento
     print_sub "$2.$1"
 fi
