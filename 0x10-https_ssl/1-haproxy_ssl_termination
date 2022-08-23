@@ -19,6 +19,7 @@ global
 
         maxconn 2048
         tune.ssl.default-dh-param 2048
+
 defaults
         log     global
         mode    http
@@ -38,24 +39,23 @@ defaults
         option forwardfor
         option http-server-close
 
-frontend www-http
-   bind *:80
-   reqadd X-Forwarded-Proto:\ http
-   default_backend www-backend
+frontend http
+    bind *:80
+    http-request set-header X-Forwarded-Proto https
+    default_backend nginx_servers
 
 frontend www-https
-   bind *:443 ssl crt /etc/haproxy/certs/www.agus-fl.tech.pem
-   reqadd X-Forwarded-Proto:\ https
-   acl letsencrypt-acl path_beg /.well-known/acme-challenge/
-   use_backend letsencrypt-backend if letsencrypt-acl
-   default_backend www-backend
+    bind *:443 ssl crt /etc/haproxy/certs/www.agus-fl.tech.pem
+    http-request set-header X-Forwarded-Proto https
+    acl letsencrypt-acl path_beg /.well-known/acme-challenge/
+    use_backend letsencrypt-backend if letsencrypt-acl
+    default_backend nginx_servers
 
-backend www-backend
-   balance roundrobin
-   redirect scheme https if !{ ssl_fc }
-   server 4390-web-01 54.160.237.107:80 check
-   server 4390-web-02 54.242.209.114:80 check
+backend nginx_servers
+    balance roundrobin
+    redirect scheme https if !{ ssl_fc }
+    server 4390-web-01  54.160.237.107:80 check
+    server 4390-web-02  54.242.209.114:80 check
 
 backend letsencrypt-backend
-   server letsencrypt 127.0.0.1:54321
-   
+    server letsencrypt 127.0.0.1:54321
