@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# /g Replace the contents of the pattern space with the contents of the hold space.
+# s/regexp/replacement/flags
+# The / characters may be uniformly replaced by any other single character within any given s command.
+# Info: https://www.computerhope.com/unix/used.htm
+
+# Change port 8080 of default file in sites-enabled to listen on port 80
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+# Restart nginx to make changes
+sudo service nginx restart
