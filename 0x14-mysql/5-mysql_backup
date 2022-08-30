@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# The MySQL dump must contain all your MySQL databases
+# The MySQL dump must be named backup.sql
+# The MySQL dump file has to be compressed to a tar.gz archive
+# This archive must have the following name format: day-month-year.tar.gz
+# The user to connect to the MySQL database must be root
+# The Bash script accepts one argument that is the password used to connect to the MySQL database
+# info all databases: https://stackoverflow.com/questions/16452523/mysqldump-with-create-database-line#:~:text=if%20you%20have%20one%20database,syntax%20will%20be%20added%20automatically
+
+sudo mysqldump -u root -p"$1" --all-databases > backup.sql
+tar -czvf "$(date '+%d-%m-%Y').tar.gz" backup.sql
+
+# con el $1 se indica que se le va a pasar la contraseña como argumento en linea - va a ser lo segundo que se pase despues del nombre del programa
+# Luego usamos lo del tar para "comprimir" archivos (es parecido al 'zip') esto ya lo habiamos usado en el proyecto de Fabric.
