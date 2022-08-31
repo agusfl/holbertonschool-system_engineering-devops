@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Fix this container so that Nginx is running as the nginx user.
+# Requirements:
+# * nginx must be running as nginx user
+# * nginx must be listening on all active IPs on port 8080
+# * You cannot use apt-get remove
+# * Write a Bash script that configures the container to fit the above
+#  requirements
+# Info user: https://fedingo.com/how-to-change-nginx-user/
+
+# Se le da permisos al archivo "nginx.conf" para poder cambiarlo
+chmod 777 /etc/nginx/nginx.conf
+
+# Se usa el comando "sed" con la opcion -s para cambiar el puerto 80 por el
+# 8080 y para cambiar
+# el usuario "www-data" por "nginx"
+sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+sudo sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
+
+# Se mata el proceso que estaba corriendo en el puerto 8080 (que era apache2
+# - lo podemos ver ejecutando el comando: netstat -nlp) porque no pueden correr
+# dos procesos en el mismo puerto y queremos que nginx corra en el 8080
+pkill apache2
+
+# Hacemos restart de nginx para que se apliquen los cambios
+sudo -u nginx service nginx restart
