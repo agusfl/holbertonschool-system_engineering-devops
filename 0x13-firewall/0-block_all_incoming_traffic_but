@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Install ufw with configuration on port 22, 80 and 443
+
+# Install ufw
+sudo apt-get -y install ufw
+
+# Set IPV6 to "yes" in case that is set in "no"
+sudo sed -i "s/IPV6=no/IPV6=yes/" /etc/default/ufw
+
+# Permitir conexiones salientes
+sudo ufw default allow outgoing
+# Negar conexiones entrantes salvo las definidas mas adelante
+sudo ufw default deny incoming
+
+# Se configura los puertos que se pueden escuchar
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
+
+# Se habilita el servicio con las configuraciones que se hicieron
+sudo ufw enable
