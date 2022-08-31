@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Requirements:
+# * write a Bash script that accepts one argument
+# * the script should run the whoami command under the user passed as an argument
+# * make sure to try your script by passing different users
+# Info command whoami --> https://phoenixnap.com/kb/su-command-linux-examples
+# Info adding /bin/bash:
+# https://askubuntu.com/questions/486346/this-account-is-currently-not-
+# available-error-when-trying-to-ssh
+
+su -c whoami "$1" -s /bin/bash
