@@ -13,6 +13,7 @@ File name must be: USER_ID.json
 
 API que usamos: https://jsonplaceholder.typicode.com/
 Info write: https://www.w3schools.com/python/python_file_write.asp
+Info json.dumpes = https://www.geeksforgeeks.org/json-dumps-in-python/
 """
 
 if __name__ == "__main__":
@@ -62,7 +63,8 @@ if __name__ == "__main__":
 
             # Guardo los datos en el orden que piden para escribir el json
             final_dic[ID] = list_data
-            # Serializo el dic y lo escribo en el dic a retornar:
+            # Serializo el dic y lo escribo en el dic a retornar, se convierte
+            # un objeto de python (final_dic) en un objeto JSON (tipo string)
             f.write(json.dumps(final_dic))
 
     except Exception as error:
