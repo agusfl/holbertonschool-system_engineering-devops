@@ -39,7 +39,7 @@ if __name__ == "__main__":
         # Pasar datos a JSON para obtener un diccionario de python y poder
         # trabajar con los datos en python - aca traemos los datos de todo list
         # Ver los datos poniendo: print(json_todos),
-        # Lo que se devuelve es una lista - (print(type(json_todos)))
+        # Lo que se devuelve es una lista de dics- (print(type(json_todos)))
         json_todos = res_todos.json()
 
         # Request URL for Users:
