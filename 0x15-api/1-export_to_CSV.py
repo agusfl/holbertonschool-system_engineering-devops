@@ -50,7 +50,8 @@ if __name__ == "__main__":
             # Se agrega la opcion de quoting para agregar comillas en el csv
             writer = csv.writer(f, quoting=csv.QUOTE_ALL)
             for attribute in json_todos:
-                # Obtenemos los datos a escribir en el archivo csv
+                # Obtenemos los datos a escribir en el archivo csv:
+                # attribute es un diccionario por eso accedo de esta forma
                 userId = attribute["userId"]
                 # El nombre lo saco del endpoint json_user
                 user_name = json_user["username"]
