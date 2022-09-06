@@ -21,6 +21,14 @@ This repository contains programs written for the **System Engineering Devop** t
 * [0x0A - Configuration Management (Puppet)](./0x0A-configuration_management)
 * [0x0B - SSH (Bash scripts) | Servers](./0x0B-ssh)
 * [0x0C - Web Server](./0x0C-web_server)
+* [0x0D - Web Stack Debugging 0](./0x0D-web_stack_debugging_0)
+* [0x0E - Web Stack Debugging 1](./0x0E-web_stack_debugging_1)
+* [0x0F - Load Balancer](./0x0F-load_balancer)
+* [0x10 - HTTP SSL (Secure Sockets Layer)](./0x10-https_ssl)
+* [0x12 - Web Stack Debugging 2](./0x12-web_stack_debugging_2)
+* [0x13 - Firewall](./0x13-firewall)
+* [0x14 - MySQL backup](./0x14-mysql)
+* [0x15 - API (Application Porgamming Interface](./0x15-api)
 
 ## Authors :pen:
 
