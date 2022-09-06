@@ -64,7 +64,6 @@ if __name__ == "__main__":
             final_dic[ID] = list_data
             # Serializo el dic y lo escribo en el dic a retornar:
             f.write(json.dumps(final_dic))
-            print(final_dic)
 
     except Exception as error:
         print("Error message: {}".format(error))
