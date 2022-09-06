@@ -10,6 +10,9 @@ Requirements:
 
 API que usamos: https://jsonplaceholder.typicode.com/
 Info CSV: https://www.pythontutorial.net/python-basics/python-write-csv-file/
+Info flag para agregar comillas usando el modulo csv:
+https://www.adamsmith.haus/python/examples/3278/csv-write-to-a-csv-file-and-
+quote-all-fields
 """
 
 if __name__ == "__main__":
@@ -44,7 +47,8 @@ if __name__ == "__main__":
 
         # Se crea el archivo "file_name" y se le agrega la data
         with open(file_name, 'w', encoding='UTF8', newline='') as f:
-            writer = csv.writer(f)
+            # Se agrega la opcion de quoting para agregar comillas en el csv
+            writer = csv.writer(f, quoting=csv.QUOTE_ALL)
             for attribute in json_todos:
                 # Obtenemos los datos a escribir en el archivo csv
                 userId = attribute["userId"]
