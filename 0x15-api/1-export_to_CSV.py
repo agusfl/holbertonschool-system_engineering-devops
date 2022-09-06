@@ -53,7 +53,7 @@ if __name__ == "__main__":
                 # Obtenemos los datos a escribir en el archivo csv
                 userId = attribute["userId"]
                 # El nombre lo saco del endpoint json_user
-                user_name = json_user["name"]
+                user_name = json_user["username"]
                 task_status = attribute["completed"]
                 title = attribute["title"]
                 # Guardo los datos en el orden que piden para escribir el csv
