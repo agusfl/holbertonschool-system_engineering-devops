@@ -81,5 +81,5 @@ if __name__ == "__main__":
             # Se pide que se imprima con un tabulador antes por eso el \t
             print("\t {}".format(task))
 
-    except Exception:
-        print("Usage: 0-gather_data_from_an_API.py ID_number")
+    except Exception as error:
+        print("Error message: {}".format(error))
