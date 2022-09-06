@@ -62,6 +62,8 @@ if __name__ == "__main__":
                 list_data.append(dic_data)
 
             # Guardo los datos en el orden que piden para escribir el json
+            # se pasa la ID que pasen como comando en linea para devolver
+            # los datos para esa ID especifica
             final_dic[ID] = list_data
             # Serializo el dic y lo escribo en el dic a retornar, se convierte
             # un objeto de python (final_dic) en un objeto JSON (tipo string)
