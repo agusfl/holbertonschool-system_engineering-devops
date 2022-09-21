@@ -53,7 +53,8 @@ def top_ten(subreddit):
         top_ten = json_res['data']['children']
 
         # Se hace un for para imprimir cada uno de los 10 titulos que estan
-        # en el top ten
+        # en el top ten, dentro de cada children a "title" se accede atraves
+        # de "data"
         for title in top_ten:
             print(title['data']['title'])
 
