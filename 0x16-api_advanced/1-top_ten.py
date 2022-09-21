@@ -30,8 +30,8 @@ def top_ten(subreddit):
         # Esta va a ser la URL a la que vamos a hacer una request, subreddit va
         # a ser el "tema" que se pase como argumento en linea, usamos
         # "query string" para pasarle un limit a la request de 10 resultados
-        url_sub = "https://www.reddit.com/r/{}/hot.json?limit=10"
-        .format(subreddit)
+        url_sub = "https://www.reddit.com/r/{}/hot.json?limit=10"\
+                  .format(subreddit)
 
         headers = requests.utils.default_headers()
 
